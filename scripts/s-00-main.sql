@@ -1,0 +1,5 @@
+--@Autor(es): Diaz Pacheco Jose Juan y Moreno Peralta Angel Eduardo
+--@Fecha creación: 01/01/2022
+--@Descripción: Script encargado de invocar funciones tales como:
+-- Eliminar al usuario en caso de que exista
+-- Crear objetos necesarios

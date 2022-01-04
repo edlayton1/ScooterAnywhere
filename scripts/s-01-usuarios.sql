@@ -1,0 +1,5 @@
+--@Autor(es): Diaz Pacheco Jose Juan y Moreno Peralta Angel Eduardo
+--@Fecha creación: 01/01/2022
+--@Descripción: Script encargado de la creacion de los usuarios:
+-- Admin: Rol para poder implementar el caso de estudio
+-- Usuario: Permiso para crear sesiones.
