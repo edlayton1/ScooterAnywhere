@@ -1,3 +1,0 @@
---@Autor(es): Diaz Pacheco Jose Juan y Moreno Peralta Angel Eduardo
---@Fecha creación: 01/01/2022
---@Descripción: Script encargado de contener todo el codigo DDL para crear tablas.
