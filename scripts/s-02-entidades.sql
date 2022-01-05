@@ -181,3 +181,14 @@ create table recarga_scooter(
   constraint rs_carga_chk check(carga > 0 and carga <= 100)
 );
 
+-- TABLA UBICACION
+
+create table ubicacion(
+  ubicacion_id number(12,0) constraint ubicacion_pk primary key,
+  fecha date default sysdate,
+  longitud number(5,2) not null,
+  latitud number(5,2) not null,
+  hora date not null,
+  scooter_id constraint ubicacion_scooter_id_fk 
+    references scooter(scooter_id)
+);

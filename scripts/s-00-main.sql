@@ -13,3 +13,5 @@ Prompt Creando modelo
 connect dpmp_proy_admin/pass
 
 @@s-02-entidades.sql
+
+
