@@ -1,0 +1,10 @@
+insert into marca (marca_id, nombre) values (1, 'Buzzdog');
+insert into marca (marca_id, nombre) values (2, 'Tagcat');
+insert into marca (marca_id, nombre) values (3, 'Skimia');
+insert into marca (marca_id, nombre) values (4, 'Twimbo');
+insert into marca (marca_id, nombre) values (5, 'Katz');
+insert into marca (marca_id, nombre) values (6, 'Eire');
+insert into marca (marca_id, nombre) values (7, 'Kayveo');
+insert into marca (marca_id, nombre) values (8, 'Dabjam');
+insert into marca (marca_id, nombre) values (9, 'Mybuzz');
+insert into marca (marca_id, nombre) values (10, 'Yadel');

@@ -13,7 +13,7 @@ create table marca(
 
 create table telefono(
   telefono_id number(6,0) constraint telefono_pk primary key,
-  telefono varchar(10) not null,
+  telefono varchar(11) not null,
   marca_id not null constraint telefono_marca_id_fk references marca(marca_id)
 );
 
@@ -108,7 +108,7 @@ create table tarjeta_prepago(
 
 create table falla(
   falla_id number(10,0) constraint falla_pk primary key,
-  ubicacion varchar2(10),
+  ubicacion varchar2(12),
   fecha date not null,
   texto varchar2(2000) not null,
   scooter_id not null constraint falla_scooter_id_fk 
@@ -134,10 +134,7 @@ create table servicio(
     references scooter(scooter_id),
   usuario_id not null constraint servicio_usuario_id_fk
     references usuario(usuario_id),
-  constraint servicio_tipo_chk check(tipo in ('C','V','R')),
-  constraint servicio_tipo_scooter_chk 
-    check((tipo in ('V','R') and scooter_id is not null) 
-      or (tipo = 'C' and scooter_id is null))
+  constraint servicio_tipo_chk check(tipo in ('C','V','R'))
 );
 
 -- TABLA SERVICIO_VIAJE
