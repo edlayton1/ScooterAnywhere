@@ -30,5 +30,23 @@ create or replace synonym usuario for dpmp_proy_admin.usuario;
 create or replace synonym usuario for dpmp_proy_admin.falla;
 create or replace synonym usuario for dpmp_proy_admin.foto;
 
+connect dpmp_proy_admin/pass
+
 -- sinonimos privados 
 --xx_<nombre tabla>
+declare 
+  cursor cur_nombres is 
+    select 
+    table_name 
+    from user_tables;
+  v_sql varchar2(1000);
+  v_nombre varchar2(40);
+begin
+  for c in cur_nombres loop
+    v_nombre:=lower(c.table_name);
+    v_sql := 'create or replace synonym xx_' || v_nombre || ' for ' || v_nombre;
+    execute immediate v_sql;
+  end loop;
+end;
+/
+show errors
