@@ -42,6 +42,8 @@ create table scooter(
   num_serie varchar2(10) not null,
   num_matricula varchar2(10) not null,
   codigo_acceso varchar2(10) not null,
+  scooter_reemplazo_id number(10,0) constraint scooter_scooter_id_fk
+    references scooter(scooter_id),
   fecha_status date not null,
   status_scooter_id not null constraint scooter_status_scooter_id 
     references status_scooter(status_scooter_id),
