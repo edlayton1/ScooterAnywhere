@@ -45,9 +45,9 @@ create role rol_invitado;
 
 -- Asignando privilegios
 
-grant create table, create sequence, create session, create synonym, create procedure, create trigger, create view to rol_admin;
+grant create table, create sequence, create session, create synonym, create procedure, create trigger, create view, create public synonym to rol_admin;
 
-grant create session to rol_invitado;
+grant create session, create synonym to rol_invitado;
 
 -- Asignando roles a usuarios
 

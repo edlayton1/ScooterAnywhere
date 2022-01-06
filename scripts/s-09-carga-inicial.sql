@@ -70,4 +70,6 @@ prompt tarjeta_prepago
 
 @Carga/tarjeta_prepago.sql
 
+@Carga/ubicacion.sql
+
 commit;
