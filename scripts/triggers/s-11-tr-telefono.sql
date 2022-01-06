@@ -15,7 +15,7 @@ begin
   select count(*) into v_count from telefono t where marca_id = v_marca_id;
 
   if v_count >= 3 then
-    raise_application_error(20001,'La marca con id: '
+    raise_application_error(-20001,'La marca con id: '
       || v_marca_id
       ||' ya tiene hasta 3 telefonos');
   end if;

@@ -34,6 +34,6 @@ where to_char(fecha_status,'yyyy') in ('2020','2021'));
 
 -- COnsulta de tabla externa
 
--- Exta
+-- Extra
 
 select marca_id,count(*) from telefono group by (marca_id) having count(*)>3;
