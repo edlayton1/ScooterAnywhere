@@ -12,9 +12,10 @@ connect DPMP_PROY_ADMIN
 -- Tabla externa que muestra las zonas mas peligrosas
 create table zonas_peligro(
   zona_peligro_id number(10,0),
-  nombre varchar2(40),
-  accidentes number(10,0),
+  zona_id number(10,0),
+  num_accidentes number(10,0),
   peligrosidad number(10,0),
+  notas varchar2(100)
 
 ) organization external (
   type oracle_loader
@@ -27,7 +28,7 @@ create table zonas_peligro(
       lrtrim
       missing field values are null
       (
-        zona_id,nombre,accidentes,peligrosidad
+        zona_peligro_id,zona_id,accidentes,peligrosidad,notas
       )
   )
   location('resumen_zonas.csv')

@@ -17,4 +17,4 @@ select s.scooter_id,s.num_matricula, m.marca_nombre,
 from scooter s
 join marca m on s.marca_id = m.marca_id
 join status_scooter sc on s.status_scooter_id = sc.status_scooter_id
-where s.scooter_id = act_scooter_id 
+where s.scooter_id = act_scooter_id; 

@@ -1,4 +1,6 @@
-1,'Asia/Chongqing',5,5
-28,'Asia/Tokyo',3,3
-38,'America/Sao_Paulo',7,7
-50,'Asia/Jakarta',4,4
+1,1,6,5,'Accidentes con automovilistas'
+2,28,9,3,'Accidentes con amenazas'
+3,38,6,7,'Accidentes de robo'
+4,50,8,4,'Accidentes de caidas'
+5,30,12,10,'Accidentes de destruccion'
+6,45,1,'Accidentes menores'
