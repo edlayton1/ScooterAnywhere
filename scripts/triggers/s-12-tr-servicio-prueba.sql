@@ -29,6 +29,15 @@ begin
       Funciona bien en este escenario.');
   end;
 
+  begin
+    dbms_output.put_line('Se va a intentar eliminar un registro para robar el scooer');
+    delete from servicio where servicio_id=1;
+    exception
+      when others then
+      dbms_output.put_line('Se lanzo la excepcion: ' || sqlerrm || '
+      Funciona bien en este escenario.');
+  end;
+
   dbms_output.put_line('
   EL trigger valida correctamente e impide actualizaciones.');
 end;

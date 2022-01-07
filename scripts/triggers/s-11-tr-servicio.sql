@@ -18,6 +18,8 @@ begin
       end if;
     when updating then
       raise_application_error(-20002,'No se puede realizar operaciones de update'); 
+    when deleting then
+      raise_application_error(-20002,'No se pueden eliminar registros de los servicios'); 
   end case;
 end;
 /
