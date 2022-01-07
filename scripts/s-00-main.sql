@@ -23,5 +23,10 @@ connect dpmp_proy_admin/pass
 @@triggers/s-11-tr-servicio.sql
 @@triggers/s-11-tr-servicio-prueba.sql
 
+-- PROCEDURE
+
+@@procedimientos/s-13-p-nuevo-servicio.sql
+@@procedimientos/s-14-p-nuevo-servicio-prueba.sql
+
 
 
