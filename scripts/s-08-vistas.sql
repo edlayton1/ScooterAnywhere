@@ -25,5 +25,6 @@ create or replace view v_venta(
     direccion
   from servicio s, servicio_renta sr
   where s.servicio_id = sr.servicio_id;
+  
 
 

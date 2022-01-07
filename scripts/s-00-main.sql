@@ -15,3 +15,13 @@ connect dpmp_proy_admin/pass
 @@s-02-entidades.sql
 
 
+-- TRIGGERS
+
+@@trigger/triggers/s-11-tr-telefono.sql
+@@trigger/triggers/s-12-tr-telefono-prueba.sql
+
+@@triggers/s-11-tr-servicio.sql
+@@triggers/s-11-tr-servicio-prueba.sql
+
+
+

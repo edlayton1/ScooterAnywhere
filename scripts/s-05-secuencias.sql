@@ -95,3 +95,11 @@ start with 701
 increment by 1
 minvalue 701
 nocycle;
+
+-- Telefono 
+
+create sequence telefono_seq
+start with 21
+increment by 1
+minvalue 21
+nocycle;

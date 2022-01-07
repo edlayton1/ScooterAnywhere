@@ -9,11 +9,11 @@ insert into telefono (telefono_id, telefono, marca_id) values (8, '7090738084', 
 insert into telefono (telefono_id, telefono, marca_id) values (9, '1843982964', 7);
 insert into telefono (telefono_id, telefono, marca_id) values (10, '6869384476', 8);
 insert into telefono (telefono_id, telefono, marca_id) values (11, '7508328217', 5);
-insert into telefono (telefono_id, telefono, marca_id) values (12, '0557467359', 7);
+insert into telefono (telefono_id, telefono, marca_id) values (12, '0557467359', 6);
 insert into telefono (telefono_id, telefono, marca_id) values (13, '1541637882', 3);
-insert into telefono (telefono_id, telefono, marca_id) values (14, '6734285658', 7);
+insert into telefono (telefono_id, telefono, marca_id) values (14, '6734285658', 2);
 insert into telefono (telefono_id, telefono, marca_id) values (15, '9338124804', 9);
-insert into telefono (telefono_id, telefono, marca_id) values (16, '0155452754', 3);
+insert into telefono (telefono_id, telefono, marca_id) values (16, '0155452754', 9);
 insert into telefono (telefono_id, telefono, marca_id) values (17, '5185971213', 1);
 insert into telefono (telefono_id, telefono, marca_id) values (18, '7941332199', 3);
 insert into telefono (telefono_id, telefono, marca_id) values (19, '1446720512', 7);
