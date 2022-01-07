@@ -1,3 +1,6 @@
+--@Autor(es): Diaz Pacheco Jose Juan y Moreno Peralta Angel Eduardo
+--@Fecha creación: 06/01/2022
+--@Descripción: Prueba del procedimiento nuevo servicio renta/carga
 
 set serveroutput on
 declare

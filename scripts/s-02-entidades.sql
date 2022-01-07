@@ -80,7 +80,8 @@ create table usuario(
   usuario_id number(10,0) constraint usuario_pk primary key,
   nombre varchar2(20) not null,
   apellidos varchar2(40) not null,
-  contrasenia varchar2(20) not null
+  contrasenia varchar2(20) not null,
+  puntos number(10) default 0 not null
 );
 
 -- TABLA TARJETA_USUARIO
@@ -145,7 +146,7 @@ create table servicio(
 create table servicio_viaje(
   servicio_id constraint sv_servicio_id_fk 
     references servicio(servicio_id),
-  fecha_inicio date default sysdate,
+  fecha_inicio date default sysdate not null,
   fecha_fin generated always as (fecha_inicio + 8/24 ) virtual,
   folio varchar2(13) not null constraint sv_folio_uk unique,
   constraint servicio_viaje_pk primary key(servicio_id)
@@ -156,7 +157,7 @@ create table servicio_viaje(
 create table servicio_renta(
   servicio_id constraint sren_servicio_id_fk 
     references servicio(servicio_id),
-  fecha_inicio date default sysdate,
+  fecha_inicio date default sysdate not null,
   dias number(2,0) not null,
   direccion varchar2(100) not null,
   constraint sren_pk primary key(servicio_id)
@@ -188,7 +189,7 @@ create table recarga_scooter(
 
 create table ubicacion(
   ubicacion_id number(12,0) constraint ubicacion_pk primary key,
-  fecha date default sysdate,
+  fecha date default sysdate not null,
   longitud number(5,2) not null,
   latitud number(5,2) not null,
   hora date not null,

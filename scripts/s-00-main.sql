@@ -24,5 +24,14 @@ connect dpmp_proy_admin/pass
 @@triggers/s-12-tr-servicio-prueba.sql
 
 @@triggers/s-11-tr-historico_actualizacion.sql
-@@triggers/s-11-tr-historico_actualizacion-prueba.sql
+@@triggers/s-12-tr-historico_actualizacion-prueba.sql
+
+
+-- PROCEDURE
+
+@@procedimientos/s-13-p-nuevo-servicio.sql
+@@procedimientos/s-14-p-nuevo-servicio-prueba.sql
+
+
+
 
