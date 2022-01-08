@@ -25,7 +25,7 @@ begin
   -- Nota no se actualiza la fecha ya que esto lo realiza el trigger
 
   -- Asignar los puntos al usuario
-  select puntos from usuario where usuario_id = v_usuario_id;
+  select puntos into v_puntos from usuario where usuario_id = v_usuario_id;
 
   v_puntos := v_puntos + 1000;
 

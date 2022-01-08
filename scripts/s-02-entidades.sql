@@ -196,3 +196,13 @@ create table ubicacion(
   scooter_id constraint ubicacion_scooter_id_fk 
     references scooter(scooter_id)
 );
+
+-- TABLA PAGOS_RECARGA
+create table pagos_recarga(
+  pagos_recarga_id number (10,0) constraint pagos_recarga_pk primary key,
+  importe number(8,2) not null,
+  estado char(1) not null,
+  servicio_id not null constraint pagos_recarga_servicio_id_fk 
+    references servicio_recarga(servicio_id),
+  constraint pagos_recarga_estado_chk check(estado in('P','L'))
+);
