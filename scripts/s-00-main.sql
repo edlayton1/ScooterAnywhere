@@ -31,5 +31,8 @@ connect dpmp_proy_admin/pass
 @@procedimientos/s-13-p-verificacion-falla.sql
 @@procedimientos/s-14-p-verificacion-falla-prueba.sql
 
+-- FUNCIONES
+
 @@funciones/s-15-fx-calculo-pago.sql
+@@funciones/s-16-fx-calculo-pago-prueba.sql
 
