@@ -60,10 +60,6 @@ begin
           from status_scooter where descripcion='EN SERVICIO VIAJE';
     end case;
 
-    update scooter 
-      set status_scooter_id = v_nuevo_status_scooter_id,
-          fecha_status = sysdate
-      where scooter_id = p_scooter_id;
   end if;
 end;
 /

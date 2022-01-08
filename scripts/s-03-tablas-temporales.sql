@@ -12,7 +12,7 @@ create global temporary table scooter_actual(
 
 create or replace procedure consulta_scooter_actual(
   act_scooter_id in number) is
-select s.scooter_id,s.num_matricula, m.marca_nombre,
+select s.scooter_id,s.num_matricula, m.nombre,
   s.capacidad,sc.descripcion
 from scooter s
 join marca m on s.marca_id = m.marca_id
