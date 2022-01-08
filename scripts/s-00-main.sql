@@ -28,5 +28,8 @@ connect dpmp_proy_admin/pass
 @@procedimientos/s-13-p-nuevo-servicio.sql
 @@procedimientos/s-14-p-nuevo-servicio-prueba.sql
 
+@@procedimientos/s-13-p-verificacion-falla.sql
+@@procedimientos/s-14-p-verificacion-falla-prueba.sql
 
+@@funciones/s-15-fx-calculo-pago.sql
 

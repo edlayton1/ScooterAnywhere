@@ -72,6 +72,12 @@ nocycle;
 
 -- Foto
 
+create sequence foto_seq
+start with 1
+increment by 1
+minvalue 1
+nocycle;
+
 -- Servicio
 
 create sequence servicio_seq
@@ -102,4 +108,11 @@ create sequence telefono_seq
 start with 21
 increment by 1
 minvalue 21
+nocycle;
+
+-- Pagos_recarga
+create sequence pagos_recarga_seq
+start with 1
+increment by 1
+minvalue 1
 nocycle;

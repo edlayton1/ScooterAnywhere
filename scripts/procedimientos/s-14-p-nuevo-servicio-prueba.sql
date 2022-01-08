@@ -52,6 +52,7 @@ begin
   select fecha_status, status_scooter_id into v_nuevo_fecha_status, 
     v_nuevo_status_scooter_id from scooter
     where scooter_id = v_scooter_id;
+    
   select descripcion into v_nuevo_status_descripcion from status_scooter
     where status_scooter_id=v_nuevo_status_scooter_id;
 
