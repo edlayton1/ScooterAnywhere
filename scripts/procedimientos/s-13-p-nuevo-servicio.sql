@@ -10,6 +10,7 @@ create or replace procedure nuevo_servicio(
   v_fecha_inicio  date;
   v_fecha_fin  date;
   v_nuevo_status_scooter_id number;
+  v_folio varchar2(13);
   
   cursor cur_scooters_disponibles is 
     select scooter_id from scooter 
@@ -50,10 +51,11 @@ begin
         dbms_output.put_line('El tipo de servicio es de viaje, el scooter asignado es: ' || p_scooter_id);
 
         -- Falta, crea la funcion folio
+        select creacion_folio(p_servicio_id,p_scooter_id,p_usuario_id) into v_folio from dual;
 
         insert into servicio_viaje 
           values(p_servicio_id,sysdate,sysdate+8/24, 
-            p_tipo || to_char(sysdate,'yyyy-mm-dd')
+            v_folio
           );
 
         select status_scooter_id into v_nuevo_status_scooter_id 

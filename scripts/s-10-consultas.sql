@@ -31,9 +31,10 @@ minus
 (select * from historico
 where to_char(fecha_status,'yyyy') in ('2020','2021'));
 
--- Consulta de tabla temporal
+-- Consulta de tabla temporal donde matricula en scooter inicie con 7
+select sa.scooter.id,sa.num_matricula, sa.status_actual from scooter_actual sa 
+where sa.num_matricula like '7%'
 
--- COnsulta de tabla externa
 --Consulta de tabla para observar zonas peligrosas por reportes externos
 
 select zp.zona_peligro_id as Zona de peligro,z.nombre as Nombre de zona,

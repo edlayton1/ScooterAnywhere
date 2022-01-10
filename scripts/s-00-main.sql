@@ -14,7 +14,17 @@ connect dpmp_proy_admin/pass
 
 @@s-02-entidades.sql
 
+@@s-03-tablas-temporales.sql
+
+@@s-04-tablas-externas.sql
+
 @@s-05-secuencias.sql
+
+@@s-06-indices.sql
+
+@@s-07-sinonimos.sql
+
+@@s-08-vistas.sql
 
 @@s-09-carga-inicial.sql
 
@@ -37,10 +47,11 @@ prompt Creacion procedimientos
 
 
 @@procedimientos/s-13-p-verificacion-falla.sql
-@@procedimientos/s-14-p-verificacion-falla-prueba.sql
+--@@procedimientos/s-14-p-verificacion-falla-prueba.sql
 
 -- FUNCIONES
 
 @@funciones/s-15-fx-calculo-pago.sql
-@@funciones/s-16-fx-calculo-pago-prueba.sql
+--@@funciones/s-16-fx-calculo-pago-prueba.sql
 
+@@funciones/s-15-fx-creacion-folio.sql
