@@ -4,7 +4,7 @@
 
 whenever sqlerror exit rollback
 
-connect dpmp_proy_admin/pass
+
 
 prompt Marca
 
