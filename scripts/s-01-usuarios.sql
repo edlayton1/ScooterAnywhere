@@ -4,6 +4,8 @@
 
 -- ELiminando datos previos
 
+
+
 set serveroutput on
 
 declare
@@ -46,6 +48,16 @@ create role rol_invitado;
 -- Asignando privilegios
 
 grant create table, create sequence, create session, create synonym, create procedure, create trigger, create view, create public synonym to rol_admin;
+
+-- Crea un directorio en tmp
+-- mkdir /tmp/blob
+-- chmod 777 /tmp/blob
+-- chown root /tmp/blob
+
+create or replace directory blob_dir as '/tmp/blob';
+
+grant read, write on directory blob_dir to rol_admin;
+--grant read, write on directory blob_dir to dpmp_proy_admin;
 
 grant create session, create synonym to rol_invitado;
 

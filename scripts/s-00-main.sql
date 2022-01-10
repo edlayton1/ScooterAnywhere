@@ -36,3 +36,6 @@ connect dpmp_proy_admin/pass
 @@funciones/s-15-fx-calculo-pago.sql
 @@funciones/s-16-fx-calculo-pago-prueba.sql
 
+@funciones/s-15-fx-carga-imagen.sql
+@funciones/s-16-fx-carga-imagen-prueba.sql
+
