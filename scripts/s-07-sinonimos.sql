@@ -22,6 +22,8 @@ grant insert on falla to dpmp_proy_invitado;
 grant select on foto to dpmp_proy_invitado;
 grant insert on foto to dpmp_proy_invitado;
 
+grant select on dpmp_proy_admin.usuario_seq to dpmp_proy_invitado;
+
 -- 3 sinonimos del usuario invitado
 
 connect dpmp_proy_invitado/pass
@@ -29,6 +31,8 @@ connect dpmp_proy_invitado/pass
 create or replace synonym usuario for dpmp_proy_admin.usuario;
 create or replace synonym falla for dpmp_proy_admin.falla;
 create or replace synonym foto for dpmp_proy_admin.foto;
+create or replace synonym usuario_seq for dpmp_proy_admin.usuario_seq;
+
 
 connect dpmp_proy_admin/pass
 
