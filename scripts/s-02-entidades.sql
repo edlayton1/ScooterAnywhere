@@ -206,3 +206,5 @@ create table pagos_recarga(
     references servicio_recarga(servicio_id),
   constraint pagos_recarga_estado_chk check(estado in('P','L'))
 );
+
+
