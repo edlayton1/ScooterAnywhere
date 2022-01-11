@@ -63,8 +63,13 @@ router.post('/authentication', function (req, res, next) {
 	getUser(req, res, usuario, password);
 });
 
+// SIGN UP
+
 router.get('/signup', function (req, res) {
-	res.render('auth/signup');
+	res.render('auth/signup', {
+		email: '',
+		password: '',
+	});
 });
 
 const postUser = async (req, res, usuario, apellidos, password) => {
