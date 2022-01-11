@@ -1,0 +1,55 @@
+<%- include('template/cabecera',{title: 'Inicio'}) %>
+<section id="Welcome">
+	<div
+		id="carouselExampleControls"
+		class="carousel slide"
+		data-bs-ride="carousel"
+	>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img
+					src="./img/scooter2.png"
+					style="height: 600px"
+					class="d-block w-100"
+					alt="..."
+				/>
+				<div class="carousel-caption d-none d-md-block">
+					<h2>Conocenos</h2>
+					<h3>Nuestros scooters te llevaran a donde necesites.</h3>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img
+					src="./img/scooter1.jpg"
+					style="height: 600px"
+					class="d-block w-100"
+					alt="..."
+				/>
+				<div class="carousel-caption d-none d-md-block">
+					<h2>Nuevos Modelos</h2>
+					<h3>COn una gran variedad de estilos a escoger!</h3>
+				</div>
+			</div>
+		</div>
+		<button
+			class="carousel-control-prev"
+			type="button"
+			data-bs-target="#carouselExampleControls"
+			data-bs-slide="prev"
+		>
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button
+			class="carousel-control-next"
+			type="button"
+			data-bs-target="#carouselExampleControls"
+			data-bs-slide="next"
+		>
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+	<div class="container"></div>
+</section>
+<%-include('template/footer') %>

@@ -1,0 +1,44 @@
+<%- include('../template/cabecera',{title: 'Login'}) %>
+<div class="container text-center" style="padding-top: 10px">
+	<h2>Login</h2>
+	<% if(messages.error){%>
+
+	<p style="color: red"><%- messages.error %></p>
+	<% } %> <% if (messages.success) { %>
+	<p style="color: green"><%- messages.success %></p>
+	<% } %>
+	<form action="/auth/authentication" method="post" name="form1">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Usuario</label>
+			<input
+				name="usuario"
+				class="form-control"
+				id="usuario"
+				aria-describedby="emailHelp"
+				placeholder="Ingrese usuario"
+				value=""
+			/>
+		</div>
+
+		<br />
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">Constraseña</label>
+			<input
+				type="password"
+				name="password"
+				class="form-control"
+				id="password"
+				aria-describedby="emailHelp"
+				placeholder="*********"
+				value=""
+			/>
+		</div>
+
+		<br />
+
+		<input type="submit" class="btn btn-success" value="Ingresar" />
+	</form>
+</div>
+
+<%-include('../template/footer') %>
