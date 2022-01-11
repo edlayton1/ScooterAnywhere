@@ -71,26 +71,20 @@ const postUser = async (req, res, usuario, apellidos, password) => {
 	try {
 		const connection = await (await db()).getConnection();
 		const data = await connection.execute(
-			'insert into usuario(usuario_id, nombre, apellidos, constrasenia) values(usuario_seq.nextval,:usuario,:apellidos, :password)',
+			'insert into usuario(usuario_id, nombre, apellidos, contrasenia) values(usuario_seq.nextval,:usuario,:apellidos, :password)',
 			[usuario, apellidos, password]
 			// if user not found
 		);
 		console.log(data);
-		await connection.close();
-		/* const rows = data.rows;
-
-		console.log(rows[0][1]);
-		if (rows.length <= 0) {
-			req.flash('error', 'Ingrese usuario y contraseña validas!');
-			res.redirect('/login');
-		} else {
-			// if user found
-			// render to views/user/edit.ejs template file
+		const { rowsAffected } = data;
+		if (rowsAffected) {
+			await connection.commit();
+			await connection.close();
 
 			req.session.loggedin = true;
-			req.session.name = rows[0][1];
+			req.session.name = usuario;
 			res.redirect('/auth/home');
-		} */
+		}
 	} catch (err) {
 		console.error(err);
 	}
