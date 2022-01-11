@@ -41,7 +41,8 @@ begin
   select puntos into v_puntos_despues from usuario 
     where usuario_id=v_usuario_id;
 
-  dbms_output.put_line('Los puntos antes de la verifiacion eran: '
+  dbms_output.put_line('Los puntos antes de la verificacion del usuario'||v_usuario_id
+    || 'eran: '
     || v_puntos_antes || ', ahora los puntos del usuario son: '
     || v_puntos_despues || '
     ');

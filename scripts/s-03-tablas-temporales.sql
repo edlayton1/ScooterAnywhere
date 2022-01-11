@@ -2,19 +2,18 @@
 --@Fecha creación: 01/01/2022
 --@Descripción: Script encargado de la creacion de tablas temporales.
 set serveroutput on
-create private temporary table ora$ptt_scooter_marca(
+create global temporary table scooter_marca(
   scooter_id number(10,0),
   num_matricula varchar2(40),
   marca_nombre varchar2(40),
   capacidad number (5,2),
   status_actual varchar(2000)
-) on commit drop definition;
+) on commit preserve rows;
 
 
 create or replace procedure consulta_scooter_marca(
   p_scooter_marca in varchar2
 ) is
-
 
 cursor cur_scooters is
   select s.scooter_id,s.num_matricula, m.nombre,
@@ -26,7 +25,7 @@ cursor cur_scooters is
 
 begin
   for i in cur_scooters loop
-    insert into scooter_actual values(i.scooter_id,i.num_matricula,i.nombre,
+    insert into scooter_marca values(i.scooter_id,i.num_matricula,i.nombre,
       i.capacidad,i.descripcion);
   end loop;
 end;
@@ -37,6 +36,6 @@ show errors
 declare
   v_scooter varchar2(40) := 'Eire';
 begin
-  consulta_scooter_actual(v_scooter);
+  consulta_scooter_marca(v_scooter);
 end;
 /

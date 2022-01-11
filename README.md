@@ -48,6 +48,24 @@ Una empresa de scooters se ha instalado en la ciudad, se debe desarrollar una ba
 ### LOBS y cursores
 
 Estos archivos, no son creados pero son añadidas estas funcionalidades en los anteriores scripts, se usan cursores y hay una funcion dedicada a Lobs.
+
+### Pruebas
+
+Para llevar a cabo las pruebas hacemos lo siguiente:
+``` shell
+@@triggers/s-12-tr-telefono-prueba.sql
+@@triggers/s-12-tr-servicio-prueba.sql
+@@triggers/s-12-tr-historico_actualizacion-prueba.sql
+
+@@funciones/s-16-fx-calculo-pago-prueba.sql
+@@funciones/s-16-fx-creacion-folio-prueba.sql
+@@funciones/s-16-fx-carga-imagen-prueba.sql
+
+@@procedimientos/s-14-p-nuevo-servicio-prueba.sql
+@@procedimientos/s-14-p-verificacion-falla-prueba.sql
+
+```
+
 ## Modelos
 
 ### Modelo relacional

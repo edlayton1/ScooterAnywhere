@@ -30,7 +30,7 @@ begin
   end;
 
   begin
-    dbms_output.put_line('Se va a intentar eliminar un registro para robar el scooer');
+    dbms_output.put_line('Se va a intentar eliminar un registro para robar el scooter');
     delete from servicio where servicio_id=1;
     exception
       when others then

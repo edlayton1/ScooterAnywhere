@@ -1,6 +1,14 @@
 --@Autor(es): Jose Juan y Angel Eduardo
 --@Fecha creación: 07/01/2022
 --@Descripción: Funcion para cargar imagenes
+connect sys as sysdba
+create or replace directory fotos_dir as '/tmp/bases/fotos_fallo';
+grant read on directory fotos_dir to dpmp_proy_admin;
+
+connect dpmp_proy_admin/pass
+
+
+set serveroutput on
 create or replace function cargaImagen(
   p_nombre_imagen varchar2
 ) return blob is
@@ -11,7 +19,7 @@ create or replace function cargaImagen(
   v_src_len number;
   v_dest_len number;
 begin
-  v_bfile := bfilename('BLOB_DIR', p_nombre_imagen);
+  v_bfile := bfilename('FOTOS_DIR', p_nombre_imagen);
   dbms_lob.createTemporary(v_blob, TRUE, dbms_lob.session) ;
 
   if dbms_lob.fileexists(v_bfile) = 0 then

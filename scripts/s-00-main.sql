@@ -39,6 +39,15 @@ prompt creacion trigger historico
 @@triggers/s-11-tr-historico_actualizacion.sql
 --@@triggers/s-12-tr-historico_actualizacion-prueba.sql
 
+-- FUNCIONES
+
+@@funciones/s-15-fx-calculo-pago.sql
+--@@funciones/s-16-fx-calculo-pago-prueba.sql
+
+@@funciones/s-15-fx-creacion-folio.sql
+
+@funciones/s-15-fx-carga-imagen.sql
+--@funciones/s-16-fx-carga-imagen-prueba.sql
 
 -- PROCEDURE
 prompt Creacion procedimientos
@@ -49,12 +58,4 @@ prompt Creacion procedimientos
 @@procedimientos/s-13-p-verificacion-falla.sql
 --@@procedimientos/s-14-p-verificacion-falla-prueba.sql
 
--- FUNCIONES
 
-@@funciones/s-15-fx-calculo-pago.sql
---@@funciones/s-16-fx-calculo-pago-prueba.sql
-
-@@funciones/s-15-fx-creacion-folio.sql
-
-@funciones/s-15-fx-carga-imagen.sql
---@funciones/s-16-fx-carga-imagen-prueba.sql
