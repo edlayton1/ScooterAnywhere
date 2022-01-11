@@ -37,10 +37,10 @@ where sa.num_matricula like '7%'
 
 --Consulta de tabla para observar zonas peligrosas por reportes externos
 
-select zp.zona_peligro_id as Zona de peligro,z.nombre as Nombre de zona,
-  zp.num_accidentes as Numero de accidentes, zp.peligrosidad as Nivel de peligro,
+select zp.zona_peligro_id as Zona_de_peligro,z.nombre as Nombre_de_zona,
+  zp.num_accidentes as Numero_de_accidentes, zp.peligrosidad as Nivel_de_peligro,
   zp.notas as Notas
-from zona_peligro zp
+from zonas_peligro zp
 join zona z on z.zona_id = zp.zona_id
 where zp.peligrosidad > 4;
 -- Extra

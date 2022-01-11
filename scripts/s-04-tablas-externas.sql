@@ -31,7 +31,7 @@ create table zonas_peligro(
         zona_peligro_id,zona_id,num_accidentes,peligrosidad,notas
       )
   )
-  location('../resumen_zonas.csv')
+  location('resumen_zonas.csv')
 )reject limit unlimited;
 
 !mkdir -p /tmp/bases
